@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <script type="text/javascript" src="./scripts/main.js"></script>
+    <title>Consultas</title>
+
+    <style>
+      
+    </style>
+</head>
+<body page='lista'>
+  <nav>
+    <img src="./img/favicon.png">
+  </nav>
+    <div class="container" id="listaConsultas">
+      <h1 id="consultas">Consultas</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Médico Responsável</th>
+              <th>Paciente</th>
+              <th>Data Consulta</th>
+              <th>Horário Consulta</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="listaConsultasBody"></tbody>
+        </table>
+        <br>
+        <div>
+          <button onclick="visualizar('cadastro')" class="azul" id="btnAgendarConsulta">Agendar Consulta</button>
+        </div>
+    </div>
+
+    <form class="container" id="cadastroConsulta">
+      <h1>Nova Consulta</h1>
+      <div class="label">
+        <div>ID</div>
+        <div>
+          <input type="number" readonly id="id">
+        </div>
+      </div>
+
+      <div class="label">
+        <div>Médico Responsável</div>
+        <div>
+          <input id="medicoResp">
+        </div>
+      </div>
+
+      <div class="label">
+        <div>Paciente</div>
+        <div>
+          <input id="paciente">
+        </div>
+      </div>
+      <div class="label">
+        <div>Data Consulta</div>
+        <div>
+          <input id="dataConsulta">
+        </div>
+      </div>
+      <div class="label">
+        <div>Horário Consulta</div>
+        <div>
+          <input id="horarioConsulta">
+        </div>
+      </div>
+      <div>
+        <button class="azul">Salvar</button>
+        <button onclick="visualizar('lista')" type="button">Cancelar</button>
+      </div>
+      <br>
+    </form>
+</body>
+</html>

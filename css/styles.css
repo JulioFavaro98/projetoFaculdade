@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(to top, white 30%, #0DB194);
+}
+nav{
+    width: 100%;
+    height: 10px;
+}
+
+h1{
+    margin: 40px 0 40px 0;
+    font-size: 50px;
+}
+
+input{
+    background-color: transparent;
+    width: 300px;
+    height: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    width: 150px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: grey;
+}
+
+.container, form{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-cadastro{
+    margin-bottom: 40px;
+}
+
+button.azulEdit,
+button.vermelhoDelete{
+    margin: 5px;
+    width: 70px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+button.azul{
+    color: blue;
+    border-color: blue;
+}
+
+button.azulEdit{
+    color: blue;
+    border-color: blue;
+}
+
+button.vermelhoDelete{
+    color: red;
+    border-color: red;
+}
+
+button.azul:active{
+    background-color: blue;
+}
+
+button.azulEdit:active{
+    background-color: blue;
+}
+
+button.vermelhoDelete:active{
+    background-color: red;
+}
+
+.container{
+    margin: 10% 30% 30% 30%;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255);
+}
+
+#listaConsultas{display: none;}
+#cadastroConsulta{display: none;}
+      
+body[page=lista] #listaConsultas {display: block;}
+body[page=cadastro] #cadastroConsulta {display: flex;}
+
+table{
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+table th,
+table td{
+    font-size: 14px;
+    padding: 10px 15px;
+    border: solid 1px #ccc;
+}
+
+#consultas{
+    text-align: center;
+}
+
+#btnAgendarConsulta{
+    margin-left: 75px;
+    margin-bottom: 60px;
+}
