@@ -35,7 +35,7 @@ function desenhar(){
                 <td>${consulta.data}</td>
                 <td>${consulta.hora}</td>
                 <td>
-                    <button class="azulEdit" onclick='visualizar("cadastro", ${consulta.id})'>Editar</button>
+                    <button class="azulEdit" onclick='visualizar("cadastro", true, ${consulta.id})'>Editar</button>
                     <button class="vermelhoDelete" onclick='perguntarSeDeleta(${consulta.id})'>Deletar</button>
                 </td>
             </tr>`
@@ -80,9 +80,18 @@ function perguntarSeDeleta(id){
     }
 }
 
-function visualizar(pagina, id=null){
+function limparEdicao(){
+    document.getElementById('medicoResp').value = ' '
+    document.getElementById('paciente').value = ' '
+    document.getElementById('dataConsulta').value = ' '
+    document.getElementById('horarioConsulta').value = ' '
+
+}
+
+function visualizar(pagina, novo=false, id=null){
     document.body.setAttribute('page', pagina)
     if(pagina === "cadastro"){
+        if(novo == true) limparEdicao()
         if(id){
             const consulta = listaConsultas.consulta.find( consulta => consulta.id == id)
             if(consulta){
